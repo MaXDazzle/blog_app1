@@ -2,10 +2,10 @@
 <html>
 <head>
     <meta charset="UTF-8">
-    <title>Главная страница блога</title>
+    <title>Р“Р»Р°РІРЅР°СЏ СЃС‚СЂР°РЅРёС†Р° Р±Р»РѕРіР°</title>
 </head>
 <body>
-    <h1>Публичные посты</h1>
+    <h1>РџСѓР±Р»РёС‡РЅС‹Рµ РїРѕСЃС‚С‹</h1>
 
     {% if posts %}
         <ul>
@@ -13,18 +13,18 @@
             <li>
                 <h2>{{ post[1] }}</h2>
                 <p>{{ post[2] }}</p>
-                <small>Автор: {{ post[3] }} | Дата: {{ post[4] }}</small>
+                <small>РђРІС‚РѕСЂ: {{ post[3] }} | Р”Р°С‚Р°: {{ post[4] }}</small>
             </li>
         {% endfor %}
         </ul>
     {% else %}
-        <p>Постов пока нет.</p>
+        <p>РџРѕСЃС‚РѕРІ РїРѕРєР° РЅРµС‚.</p>
     {% endif %}
 
     <p>
-        <a href="{{ url_for('create') }}">Создать пост</a> |
-        <a href="{{ url_for('login') }}">Войти</a> |
-        <a href="{{ url_for('register') }}">Регистрация</a>
+        <a href="{{ url_for('create') }}">РЎРѕР·РґР°С‚СЊ РїРѕСЃС‚</a> |
+        <a href="{{ url_for('login') }}">Р’РѕР№С‚Рё</a> |
+        <a href="{{ url_for('register') }}">Р РµРіРёСЃС‚СЂР°С†РёСЏ</a>
     </p>
 </body>
 </html>
