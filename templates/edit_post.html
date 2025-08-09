@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Редактировать пост</title>
+</head>
+<body>
+    <h1>Редактировать пост</h1>
+    <form method="post">
+        <input type="text" name="title" value="{{ post['title'] }}" placeholder="Заголовок" required><br>
+        <textarea name="content" placeholder="Текст поста" required>{{ post['content'] }}</textarea><br>
+        <input type="text" name="tags" value="{{ post['tags'] }}" placeholder="Теги (через запятую)"><br>
+        <button type="submit">Сохранить изменения</button>
+    </form>
+    <p><a href="{{ url_for('index') }}">На главную</a></p>
+</body>
+</html>
