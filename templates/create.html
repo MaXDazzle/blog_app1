@@ -2,20 +2,20 @@
 <html>
 <head>
     <meta charset="UTF-8">
-    <title>Создать пост</title>
+    <title>РЎРѕР·РґР°С‚СЊ РїРѕСЃС‚</title>
 </head>
 <body>
-    <h1>Создать новый пост</h1>
+    <h1>РЎРѕР·РґР°С‚СЊ РЅРѕРІС‹Р№ РїРѕСЃС‚</h1>
     <form method="post">
-        <label>Заголовок:</label><br>
+        <label>Р—Р°РіРѕР»РѕРІРѕРє:</label><br>
         <input type="text" name="title" required><br><br>
 
-        <label>Содержимое:</label><br>
+        <label>РЎРѕРґРµСЂР¶РёРјРѕРµ:</label><br>
         <textarea name="content" rows="5" required></textarea><br><br>
 
-        <button type="submit">Опубликовать</button>
+        <button type="submit">РћРїСѓР±Р»РёРєРѕРІР°С‚СЊ</button>
     </form>
 
-    <p><a href="{{ url_for('index') }}">Вернуться на главную</a></p>
+    <p><a href="{{ url_for('index') }}">Р’РµСЂРЅСѓС‚СЊСЃСЏ РЅР° РіР»Р°РІРЅСѓСЋ</a></p>
 </body>
 </html>
