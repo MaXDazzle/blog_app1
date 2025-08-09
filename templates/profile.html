@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Профиль пользователя</title>
+</head>
+<body>
+    <h1>Профиль: {{ user['username'] }}</h1>
+    <h2>Мои посты</h2>
+    {% for post in posts %}
+        <div>
+            <h3><a href="{{ url_for('view_post', post_id=post['id']) }}">{{ post['title'] }}</a></h3>
+        </div>
+    {% else %}
+        <p>Вы пока не создали ни одного поста.</p>
+    {% endfor %}
+
+    <h2>Подписки</h2>
+    {% for subscription in subscriptions %}
+        <p>{{ subscription['username'] }}</p>
+    {% else %}
+        <p>Вы пока ни на кого не подписаны.</p>
+    {% endfor %}
+
+    <p><a href="{{ url_for('index') }}">На главную</a></p>
+</body>
+</html>
