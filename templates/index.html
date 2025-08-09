@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Главная страница блога</title>
+</head>
+<body>
+    <h1>Публичные посты</h1>
+
+    {% if posts %}
+        <ul>
+        {% for post in posts %}
+            <li>
+                <h2>{{ post[1] }}</h2>
+                <p>{{ post[2] }}</p>
+                <small>Автор: {{ post[3] }} | Дата: {{ post[4] }}</small>
+            </li>
+        {% endfor %}
+        </ul>
+    {% else %}
+        <p>Постов пока нет.</p>
+    {% endif %}
+
+    <p>
+        <a href="{{ url_for('create') }}">Создать пост</a> |
+        <a href="{{ url_for('login') }}">Войти</a> |
+        <a href="{{ url_for('register') }}">Регистрация</a>
+    </p>
+</body>
+</html>

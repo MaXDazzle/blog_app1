@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Регистрация</title>
+</head>
+<body>
+    <h1>Регистрация</h1>
+    <form method="post">
+        <label>Имя пользователя:</label><br>
+        <input type="text" name="username" required><br><br>
+
+        <label>Пароль:</label><br>
+        <input type="password" name="password" required><br><br>
+
+        <button type="submit">Зарегистрироваться</button>
+    </form>
+
+    <p><a href="{{ url_for('login') }}">Уже есть аккаунт? Войти</a></p>
+</body>
+</html>
