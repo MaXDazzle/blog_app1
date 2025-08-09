@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Посты по тегу: {{ tag }}</title>
+</head>
+<body>
+    <h1>Посты с тегом "{{ tag }}"</h1>
+    {% for post in posts %}
+        <div>
+            <h3><a href="{{ url_for('view_post', post_id=post['id']) }}">{{ post['title'] }}</a></h3>
+            <p>{{ post['content'][:150] }}...</p>
+        </div>
+    {% else %}
+        <p>Постов с этим тегом пока нет.</p>
+    {% endfor %}
+
+    <p><a href="{{ url_for('index') }}">На главную</a></p>
+</body>
+</html>
